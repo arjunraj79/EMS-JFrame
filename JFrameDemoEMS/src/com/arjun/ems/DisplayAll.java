@@ -18,10 +18,8 @@ public class DisplayAll extends JFrame {
         title.setBounds(170, 10, 300, 30);
         add(title);
 
-        // Column headers
         String[] columns = {"id", "name", "Salary", "Department", "Position"};
 
-        // Fetching data using JDBC
         String[][] data = getEmployeeData();
 
         JTable table = new JTable(data, columns);
@@ -41,7 +39,7 @@ public class DisplayAll extends JFrame {
 
     // JDBC method to get data from MySQL
     private String[][] getEmployeeData() {
-        String[][] data = new String[10][5]; // adjust size as needed
+        String[][] data = new String[10][5]; 
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/EMS_System", "jdbc", "root1234");
             Statement stmt = con.createStatement();

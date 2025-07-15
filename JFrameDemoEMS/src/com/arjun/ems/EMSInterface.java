@@ -19,7 +19,7 @@ public class EMSInterface {
         ImageIcon logoIcon = new ImageIcon(EMSInterface.class.getResource("/com/arjun/ems/resources/icon.png"));
         Image scaledLogo = logoIcon.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         JLabel logoLabel = new JLabel(new ImageIcon(scaledLogo));
-        logoLabel.setBounds(20, 25, 90, 100); // Adjust for your layout
+        logoLabel.setBounds(20, 25, 90, 100); // Adjust layout
         frame.getContentPane().add(logoLabel);
 
         
@@ -36,7 +36,7 @@ public class EMSInterface {
         frame.getContentPane().add(viewAllBtn);
         //Action
         viewAllBtn.addActionListener(e -> {
-            new DisplayAll(); // open the new window
+            new DisplayAll(); // To display in new window
         });
 
 
@@ -78,7 +78,7 @@ public class EMSInterface {
             new UpdateEmployee();
         });
 
-        // Show the frame
+        // To view the frame
         frame.setVisible(true);
     }
 }

@@ -61,7 +61,7 @@ public class ViewEmployee extends JFrame {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                Color cardColor = (rs.getInt(1) % 2 == 0) ? new Color(173, 216, 230) : new Color(255, 182, 193); // blue or pink
+                Color cardColor = (rs.getInt(1) % 2 == 0) ? new Color(173, 216, 230) : new Color(255, 182, 193); 
 
                 JPanel card = new JPanel();
                 card.setLayout(new GridLayout(5, 1, 10, 5));
